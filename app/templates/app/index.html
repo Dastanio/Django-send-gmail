@@ -11,8 +11,8 @@
     <div class="container">
         <div class="row">
             <div class="col-xl-8 offset-xl-2 py-5">
-                <h1>Как отправить сообщения на  Gmail в Django</a></h1>
-                <p class="lead">Укажите в settings.py gmail почту с которым вы будете отправлять письмо клиентам</p>
+                <h1>Обратная связь</a></h1>
+                <p class="lead"></p>
 
                 <form id="contact-form" action="{% url 'index' %}" role="form" method="post">
                     {% csrf_token %}
@@ -27,20 +27,11 @@
                     </div>
                     <div class="controls">
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-6 ">
                                 <div class="form-group">
-                                    <label for="form_name">Name *</label>
-                                    <input id="form_name" type="text" name="name" class="form-control"
-                                        placeholder="Пожалуйста укажите свое имя... *" required="required"
-                                        data-error="Name is required.">
-                                    <div class="help-block with-errors"></div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label for="form_email">Email *</label>
+                                    <label for="form_email">Введите ваш gmail  *</label>
                                     <input id="form_email" type="email" name="gmail" class="form-control"
-                                        placeholder="Пожалуйста укажите свой gmail... *" required="required"
+                                        placeholder="Пожалуйста укажите gmail... *" required="required"
                                         data-error="Valid email is required.">
                                     <div class="help-block with-errors"></div>
                                 </div>
@@ -51,10 +42,21 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label for="form_message">Message *</label>
+                                    <label for="form_message">Можете подробно написать товар который вы хотите заказать не забудьте указать ваш адрес... *</label>
                                     <textarea id="form_message" name="message" class="form-control"
-                                        placeholder="Напишите текст... *" rows="4" required="required"
+                                        placeholder="Напишите продукт который вы хотите заказать... *" rows="4" required="required"
                                         data-error="Please, leave us a message."></textarea>
+                        
+                                        <p><label for="5">Выберите товар</label></p>
+
+                                        <p>
+                                            <select name="">
+                                            <option>ТОРТ</option>
+                                            <option>КЕКС</option>
+                                            <option>БМВ</option>
+                                            <option>ФЕРРАРИ</option>
+                                        </select>
+                                        </p>
                                     <div class="help-block with-errors"></div>
                                 </div>
                             </div>

@@ -11,15 +11,14 @@ def index(request):
 	if request.method == 'POST':
 		message = request.POST['message']
 		gmail = request.POST['gmail']
-		name = request.POST['name']
-		send_mail(name, 
-		 message,  
+		send_mail('gmail почта клиента:  ' + gmail, 
+		 'Текст сообщения от клиента:  ' + message, 
 		 settings.EMAIL_HOST_USER,
-		 [gmail], 
+		 ['dassu8457@gmail.com'], # <--- вот сдесь ты едешь 2 аккаунт  
 		 fail_silently=False)
 
 
-		messages.success(request, ('gmail sent successfully!'))
+		messages.success(request, ('Ваш заказ успешно принят, доставщик свами свяжется'))
 		return redirect('index')
 
 	return render(request, 'app/index.html')

@@ -14,7 +14,7 @@ def index(request):
 		send_mail('gmail почта клиента:  ' + gmail, 
 		 'Текст сообщения от клиента:  ' + message, 
 		 settings.EMAIL_HOST_USER,
-		 ['dassu8457@gmail.com'], # <--- вот сдесь ты едешь 2 аккаунт  
+		 ['dassu5588@gmail.com'], # <--- вот сдесь ты едешь 2 аккаунт  
 		 fail_silently=False)
 
 
